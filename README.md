@@ -1,3 +1,95 @@
+# 🌟 Nazife Rumeysa Kısacık | Kişisel Blog ve Test Otomasyon Projesi
+
+## 👤 Proje Sahibi
+![Profile Picture](https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID)
+
+**Nazife Rumeysa Kısacık**
+- 🏢 Full Stack Automation Test Engineer @ Hasvet A.Ş.
+- 📍 Konum: Türkiye, İstanbul
+- 🎓 Yazılım Mühendisliği Mezunu
+
+## 🚀 Proje Tanımı
+
+Bu proje, kişisel blog web sitesi ve otomatik test altyapısını içeren kapsamlı bir yazılım geliştirme çalışmasıdır.
+
+### 🌐 Proje Bağlantıları
+- 🔗 **GitHub Profil**: [NRumeysa](https://github.com/NRumeysa)
+- 🔗 **LinkedIn**: [Nazife Rumeysa Kısacık](https://www.linkedin.com/in/nrumeysaksck/)
+- 🌍 **Kişisel Web Sitesi**: [Yakında Eklenecek]
+
+## 🎨 Blog Web Sitesi Özellikleri
+
+### 🛠 Kullanılan Teknolojiler
+- 🌐 HTML5
+- 🎨 CSS3 (Responsive Design)
+- 📊 Font Awesome Icons
+- 🔍 SEO Uyumlu Semantik Markup
+
+### 📋 Bölümler
+- 🏠 Ana Sayfa
+- 👤 Hakkımda
+- 📝 Blog
+- 📞 İletişim
+
+## 🤖 Test Otomasyon Altyapısı
+
+### 🛠 Kullanılan Araçlar ve Teknolojiler
+- 🥒 Cucumber BDD
+- 🌐 Selenium WebDriver
+- ☕ Java
+- 🧪 JUnit
+- 📊 Maven
+- 🤖 Page Object Model
+
+### 🎯 Test Kapsamı
+- ✅ UI Testleri
+- 🔍 Fonksiyonel Testler
+- 📝 Senaryo Doğrulamaları
+
+## 🚀 Kurulum ve Çalıştırma
+
+### Ön Gereksinimler
+- ☕ Java JDK 11+
+- 🛠 Maven 3.6.3+
+- 🌐 Git
+
+### Kurulum Adımları
+```bash
+# Projeyi klonlama
+git clone https://github.com/NRumeysa/YapayZekaCalismasi.git
+
+# Bağımlılıkları yükleme
+mvn clean install
+
+# Testleri çalıştırma
+mvn test
+```
+
+## 🤝 Katkıda Bulunma
+1. 🍴 Projeyi fork edin
+2. 🌿 Yeni bir branch oluşturun (`git checkout -b feature/AmazingFeature`)
+3. 💾 Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
+4. 📤 Branch'inizi push edin (`git push origin feature/AmazingFeature`)
+5. 🔀 Bir Pull Request açın
+
+## 📜 Lisans
+📄 MIT Lisansı altında yayınlanmıştır.
+
+## 🏆 Beceriler ve Uzmanlık Alanları
+- 🖥️ Test Otomasyon
+- 🌐 Web Geliştirme
+- 📊 Kalite Güvence
+- 🤖 Yazılım Test Mühendisliği
+
+## 📞 İletişim
+- 📧 E-posta: nrumeysaksck@gmail.com
+- 💼 LinkedIn: [Nazife Rumeysa Kısacık](https://www.linkedin.com/in/nrumeysaksck/)
+- 🐱 GitHub: [@NRumeysa](https://github.com/NRumeysa)
+
+---
+
+⭐ Bu proje sürekli gelişim halindedir. Önerileriniz ve katkılarınız için her zaman açığım! 🚀
+
 # 🌟 Kişisel Blog ve Test Otomasyon Projesi
 
 Bu proje iki ana bölümden oluşmaktadır:
@@ -170,10 +262,10 @@ Test raporları `target/cucumber-reports` dizininde oluşturulur:
 ### Test Otomasyonu
 - 🥒 Cucumber (v7.14.0)
 - 🌐 Selenium WebDriver (v4.16.1)
-- 🚗 WebDriverManager (v5.6.2)
-- 📋 JUnit (v4.13.2)
-- 📝 SLF4J (v2.0.9)
-- 📊 Extent Reports (v5.1.1)
+- ☕ Java
+- 🧪 JUnit (v4.13.2)
+- 📊 Maven
+- 🤖 Page Object Model
 
 ## ⚠️ Önemli Notlar
 
