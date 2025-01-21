@@ -17,46 +17,56 @@ pipeline {
         
         stage('Install Dependencies') {
             steps {
-                // Eğer npm paketleri eklenirse burada yüklenecek
-                echo 'Installing dependencies...'
-                // sh 'npm install'
-            }
-        }
-        
-        stage('Lint') {
-            steps {
-                // HTML ve CSS dosyalarının kontrolü
-                echo 'Linting code...'
-                // HTML ve CSS linting araçları eklenebilir
+                // Maven bağımlılıklarını yükle
+                bat 'mvn clean install -DskipTests'
             }
         }
         
         stage('Test') {
             steps {
-                // Test aşaması - ileride test eklendiğinde kullanılacak
-                echo 'Running tests...'
+                // Testleri çalıştır ve raporları oluştur
+                bat 'mvn test'
+            }
+            post {
+                always {
+                    // JUnit test sonuçlarını topla
+                    junit '**/target/surefire-reports/*.xml'
+                    
+                    // Cucumber raporlarını oluştur
+                    cucumber buildStatus: 'UNSTABLE',
+                        reportTitle: 'Cucumber Report',
+                        fileIncludePattern: '**/cucumber.json',
+                        trendsLimit: 10,
+                        classifications: [
+                            [
+                                'key': 'Browser',
+                                'value': 'Chrome'
+                            ]
+                        ]
+                }
             }
         }
         
         stage('Build') {
             steps {
-                // Statik dosyaları build et
-                echo 'Building project...'
-                // Minification ve optimizasyon işlemleri eklenebilir
+                // Projeyi derle
+                bat 'mvn package -DskipTests'
             }
         }
         
         stage('Deploy') {
             steps {
-                // Deployment aşaması
-                echo 'Deploying to web server...'
-                // Örnek deployment komutları:
-                // sh 'rsync -avz --delete ./dist/ user@server:/var/www/html/'
+                echo 'Deploying...'
             }
         }
     }
     
     post {
+        always {
+            // Test sonuçlarını arşivle
+            archiveArtifacts artifacts: 'target/**/*.jar', fingerprint: true
+            archiveArtifacts artifacts: 'target/cucumber-reports/**/*', fingerprint: true
+        }
         success {
             echo 'Pipeline başarıyla tamamlandı!'
         }
